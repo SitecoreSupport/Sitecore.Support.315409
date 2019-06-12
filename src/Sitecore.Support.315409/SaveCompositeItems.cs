@@ -11,7 +11,7 @@
         {
             sectionIndex = sectionIndex + 1;
             string dPhId = GetDynamicPlaceholderId(compositeRendering);
-            var renderingPattern = $"{compositeRendering.Placeholder}/{Sitecore.XA.Feature.Composites.Constants.CompositePlaceholderPattern}+-{sectionIndex}-{dPhId}";
+            var renderingPattern = $"{compositeRendering.Placeholder}/{Sitecore.XA.Feature.Composites.Constants.CompositePlaceholderPattern}+-{sectionIndex}-{dPhId}$";
             var renderings = injectedCompositeRenderings
                 .Where(r => Regex.IsMatch(r.Placeholder, renderingPattern))
                 .ToList();
